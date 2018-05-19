@@ -63,13 +63,17 @@ ViewController Methods
 
 // Function to dynamically change the size of the textarea displaying the requestPayLoad
 function dynamicTextArea(element, data){
-	$("#" + element).append(data);
+	// Clear stale data
+	
+
+	// Append QR data to element
+	$("#" + element).val(data);
 	var text = $("#" + element).val();
 	// regex to find \n
 	var matches = text.match(/\n/g);
-	var breaks = matches ? matches.length : 5;
+	var breaks = matches ? matches.length : 2;
 	// add rows based on line-breaks in text
-	$("#" + element).attr('rows', breaks + 5);
+	$("#" + element).attr('rows', breaks + 2);
 	document.getElementById(element).focus(); 
 }
 
@@ -98,7 +102,7 @@ function postDataToEncode(clientPort){
 
 				url: 'http://localhost:' + clientPort.toString() + '/qrCode',
 				data: JSON.stringify(dataToEncode),
-				dataType: 'json',
+				dataType: 'text',
 				type: 'POST',
 				contentType: 'application/json',
 				
@@ -108,6 +112,7 @@ function postDataToEncode(clientPort){
 
 					resp = data;
 					// Get Response from server and display in text area
+
 					dynamicTextArea("qrResponse", resp);
 
 				},
@@ -137,7 +142,7 @@ This controls the display of the ReadMe file
 ****************************************************************************************************************/
 function displayDocumentationUI(clientPort){
 	// Refresh View & append new data as needed
-	$("div.view").children().remove();
+	
 	$("div.view").append(		
 		"<br>" +
 		'<zero-md file="qr/README.md">' +
@@ -192,7 +197,7 @@ function generateQRCodeUI(clientPort){
 
 				"<div class=\"form-group textfields\">" +
 				    "<label for=\"qrResponse\">QR Code Image</label>" +
-				    "<textarea class=\"form-control mx-md-3\" id=\"qrResponse\" readonly></textarea>" +
+				    "<textarea class=\"form-control mx-md-3\" id=\"qrResponse\"></textarea>" +
 				"</div>" +
 				"<br>" +
 

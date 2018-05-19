@@ -57,13 +57,22 @@ app.get("/", function(req,res){
 * 
 ****************************************************************************************************************/
 app.post("/qrCode", upload.array(), function(req, res, next){
-	
-	var dataToEncode = req.body['dataToEncode'];
+	/*
+	var dataToEncode = qr.image(req.body['dataToEncode'], {type: 'png'});
+	res.setHeader('Content-type', 'image/png');
+	dataToEncode.pipe(res);
+	*/
 
-	QRCode.toDataURL(dataToEncode, function(err, url){
-		console.log(url);
+
+	var dataToEncode = req.body['dataToEncode'];
+	QRCode.toString(dataToEncode, function(err, str){
+		console.log(str);
 		console.log(err);
-		res.send(JSON.stringify(url));
+
+
+
+		res.send((str));
 	});
+	
 
 });
