@@ -1,10 +1,12 @@
 /****************************************************************************************************************
 * 
-* Issuer & Token Requestor QR Code Generator Tool
+* QR Code Generator Tool
 * Author: David P. Lopez
-* Company: Visa, Inc.
-* Copyright 2018
+* Company: YourMOM, Inc.
+* Copyright 4343
 * 
+* Built this using open source frameworks while working at a place full of bozos.
+* You'd be surprised, the people who oversee the orgs you work for are truly incompetent.
 ****************************************************************************************************************/
 
 /****************************************************************************************************************
@@ -28,7 +30,7 @@ var clientPort = 4000;
 
 	// Default View
 	$("div.view").append(
-		"<br><h5>VTS QR Code Generator Tool Suite</h5>"
+		"<br><h5>QR Code Generator Tool Suite</h5>"
 	);
 
 	// Do something when 1st tab is clicked
@@ -36,7 +38,7 @@ var clientPort = 4000;
 		// Refresh View & append new data as needed
 		$("div.view").children().remove();
 		$("div.view").append(
-			"<br><h5>VTS QR Code Generator Tool Suite</h5>" +
+			"<br><h5>QR Code Generator Tool Suite</h5>" +
 			"<p>Please Enter and Submit the data to be encoded to obtain a QR Code.</p>"
 		);
 
