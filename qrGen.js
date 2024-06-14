@@ -1,10 +1,12 @@
 /****************************************************************************************************************
 * 
-* Issuer & Token Requestor QR Code Generator Tool
+* QR Code Generator Tool
 * Author: David P. Lopez
-* Company: Visa, Inc.
-* Copyright 2018
+* Company: YourMOM, Inc.
+* Copyright 4343
 * 
+* Built this using open source frameworks while working at a place full of bozos.
+* You'd be surprised, the people who oversee the orgs you work for are truly incompetent.
 ****************************************************************************************************************/
 
 // Declare port variables
