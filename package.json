@@ -1,18 +1,17 @@
 {
   "name": "qrgenerator",
   "version": "1.0.0",
-  "description": "QR Code Generator for VTS testing",
+  "description": "QR Code Generator for testing",
   "main": "qrGen.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stashocc.trusted.visa.com:7999/stash/com/issuerapi2.git"
+    "url": ""
   },
   "keywords": [
     "QR",
-    "VTS",
     "DevOps"
   ],
   "author": "David P. Lopez",
